@@ -45,11 +45,8 @@ def convertidor_temp(temperatura, inicio, fin):
     
     print(resultado)
         
-
-
-
 temp = float(input("ingrese su temperatura a convertir: "))
-escala_inicial = input("Indique escala inicial: C, F o K").upper()
-escala_final = input("Ingrese escala final: C, F o K").upper()
+escala_inicial = input("Indique escala inicial: C, F o K: ").upper().strip()
+escala_final = input("Ingrese escala final: C, F o K: ").upper().strip()
 #EJECUTAR FUNCION
 convertidor_temp(temp,escala_inicial,escala_final)
