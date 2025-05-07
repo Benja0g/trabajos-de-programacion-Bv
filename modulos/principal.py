@@ -26,6 +26,7 @@ while True:
         ancho = int(input("ingrese el ancho: "))
         largo = int(input("ingrese el largo: "))
         alto = int(input("ingrese el alto: "))
+        print(funciones.cuadrilatero.volumen(ancho,largo,alto))
     elif opcion == "0":
         print("saliendo del sistema...")
         break
