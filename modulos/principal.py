@@ -1,6 +1,7 @@
-import funciones.cuadrilatero
+from funciones.cuadrilatero import perimetro_cuad,area_cuad,volumen_cuad
+from funciones.circunferencia import perimetro_circ,area_circ,volumen_circ
 
-def menu_principal():
+def menu():
     print()
     print("Cálculo de funciones geométricas.")
     print("1: Perimetro")
@@ -9,27 +10,47 @@ def menu_principal():
     print("0: Salir")
     print()
 
-menu_principal()
 
-while True:
-    opcion = input("Seleccione su Opción (0-3): ")
-    if opcion == "1":
-      ancho = int(input("ingrese el ancho: "))
-      largo = int(input("ingrese el largo: "))
-      print(funciones.cuadrilatero.perimetro(ancho,largo))
+def sub_menu():
+    print()
+    print("Cálculo de funciones geométricas.")
+    print("1: cuadrilatero")
+    print("2: circunferencia")
+    print("0: salir")
+    print()
+    
 
-    elif opcion == "2":
-        ancho = int(input("ingrese el ancho: "))
-        largo = int(input("ingrese el largo: "))
-        print(funciones.cuadrilatero.area(ancho,largo))
-    elif opcion == "3":
-        ancho = int(input("ingrese el ancho: "))
-        largo = int(input("ingrese el largo: "))
-        alto = int(input("ingrese el alto: "))
-        print(funciones.cuadrilatero.volumen(ancho,largo,alto))
-    elif opcion == "0":
-        print("saliendo del sistema...")
-        break
-    else:
-        print("opcion invalida")
+def programa_principal():
+    while True:
+        menu()
+        opcion = input("Seleccione su Opción (0-3): ")
+        
+        if opcion == "1":
+            sub_menu()
+            opcion_sub_menu = input("seleccione su opción (0-3): ")
+        if opcion == "2":
+            sub_menu()
+            opcion_sub_menu = input ("seleccione su opción (0-3): ")
+           
+            if opcion_sub_menu == "1":
+                ancho = float(input("ingrese el ancho: "))
+                largo = float(input("ingrese el largo: "))
+                print(f"perimetro: {perimetro_cuad(ancho,largo)}")
+            
+            
+            elif opcion_sub_menu == "2":
+                radio = float(input("Ingrese el radio: "))
+                print(f"perimetro: {perimetro_circ(radio)}")
+        
+        elif opcion_sub_menu == "0":
+                return
+        else:
+            print("opcion invalida")
+    
+    
 
+programa_principal()
+            
+    
+
+    
