@@ -41,7 +41,9 @@ def programa_principal():
                 print(f"perimetro: {perimetro_circ(radio)}")
         
             elif opcion_sub_menu == "0":
-                return
+                print("volviendo al menu..")
+                menu()
+                
             else:
                 print("opcion invalida")
             
@@ -56,6 +58,12 @@ def programa_principal():
             elif opcion_sub_menu == "2":
                 radio = float(input("ingrese el radio: "))
                 print(f"area: {area_circ(radio)}")
+            
+            elif opcion_sub_menu == "0":
+                print("volviendo al menu..")
+                menu()
+            else:
+                print("opcion invalida")
         
         elif opcion == "3":
             sub_menu()
@@ -69,6 +77,12 @@ def programa_principal():
             elif opcion_sub_menu == "2":
                 radio = float(input("ingrese el radio: "))
                 print(f"volumen: {volumen_circ(radio)}")
+            elif opcion_sub_menu == "0":
+                print("volviendo al menu..")
+                menu()
+            else:
+                print("opcion invalida")
+
         elif opcion == "0":
             print("saliendo del sistema....")
             break
