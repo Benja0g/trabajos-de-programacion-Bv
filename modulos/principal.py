@@ -46,6 +46,7 @@ def programa_principal():
                 
             else:
                 print("opcion invalida")
+                return
             
         elif opcion == "2":
             sub_menu()
@@ -64,6 +65,7 @@ def programa_principal():
                 menu()
             else:
                 print("opcion invalida")
+                return
         
         elif opcion == "3":
             sub_menu()
@@ -82,6 +84,7 @@ def programa_principal():
                 menu()
             else:
                 print("opcion invalida")
+                return
 
         elif opcion == "0":
             print("saliendo del sistema....")
