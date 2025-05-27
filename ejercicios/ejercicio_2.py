@@ -13,8 +13,7 @@
 # print()
 # print(f"3.-:{lista_peliculas[2]} ")
 
-# print(len("DOTA"))
-# print(len(range(10)))
+
 
 lista_estudiantes = [
     ['Aquiles Baeza', [6.5,5.7,6.3]],
@@ -49,3 +48,6 @@ for estudiante in lista_estudiantes:
         promedio = suma / len(estudiante[1])
     print(f"{estudiante[0]}, Notas:{estudiante[1]}, Promedio : {round(promedio,1)}")
     print()
+
+# print(len("DOTA"))
+# print(len(range(10)))
